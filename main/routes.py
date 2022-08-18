@@ -7,15 +7,12 @@ from flask import jsonify, request
 from flask.helpers import send_from_directory
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, jwt_required, unset_jwt_cookies
 from sqlalchemy import extract
-from flask_sqlalchemy import SQLAlchemy
 from main.schema import JobSchema, UsersSchema, BankAccountSchema, UserAddressSchema, EmployerSchema
 from main.models import Job, User, BankAccount, UserAddress, Employer, db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import cross_origin
 from datetime import datetime, timedelta, timezone
 from dateutil.parser import *
-
-db = SQLAlchemy()
 
 jobs_schema = JobSchema(many=True)
 job_schema = JobSchema()

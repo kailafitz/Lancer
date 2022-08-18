@@ -2,9 +2,12 @@ from datetime import datetime, timedelta, timezone
 import json
 from flask import Flask
 from flask_cors import CORS
+from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_login import LoginManager
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, JWTManager
+
+db = SQLAlchemy()
 
 app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 app.secret_key = "SUPER_SECRET_KEY"

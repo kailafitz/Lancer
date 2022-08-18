@@ -1,5 +1,4 @@
-from main import app
-from main.routes import db
+from main import app, db
 import sys
 
 
