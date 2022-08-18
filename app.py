@@ -1,7 +1,6 @@
 from main import app, db
 import sys
 
-
 if __name__ == '__main__':
     try:
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
