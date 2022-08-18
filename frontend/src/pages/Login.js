@@ -28,7 +28,7 @@ export const Login = () => {
         const password = e.target[1].value;
         axios.post("/api/login", { "username": username, "password": password }).then(response => {
             setToken(response.data.access_token)
-            window.location.href = "https://cs50-lancer.herokuapp.com/records"
+            window.location.href = "https://kailafitz.pythonanywhere.com/records"
         }).catch((e) => {
             let string = "";
             string = e.response.data.message;

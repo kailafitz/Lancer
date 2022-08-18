@@ -41,7 +41,7 @@ export const Dashboard = () => {
 
     useEffect(() => {
         if (Object.keys(data).length <= 0) {
-            axios.get("https://cs50-lancer.herokuapp.com/api/dashboard", {
+            axios.get("https://kailafitz.pythonanywhere.com/api/dashboard", {
                 headers: {
                     Authorization: "Bearer " + token,
                     "Access-Control-Allow-Origin": "*"
@@ -64,7 +64,7 @@ export const Dashboard = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         const year = e.target.value;
-        axios.post("https://cs50-lancer.herokuapp.com/api/dashboard", { "year": year }, {
+        axios.post("https://kailafitz.pythonanywhere.com/api/dashboard", { "year": year }, {
             headers: {
                 Authorization: "Bearer " + token,
                 "Access-Control-Allow-Origin": "*"

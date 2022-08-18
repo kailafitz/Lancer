@@ -56,7 +56,7 @@ def active2():
 
 
 @app.route("/api/register", methods=["POST"])
-@cross_origin(methods=["POST"], supports_credentials=True, headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["POST"], supports_credentials=True, headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 def register():
     data = request.get_json()
     username = data["username"]
@@ -106,7 +106,7 @@ def register():
 
 
 @app.route("/api/login", methods=["POST"])
-@cross_origin(methods=["POST"], supports_credentials=True, headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["POST"], supports_credentials=True, headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 def login():
     data = request.get_json()
     username = data["username"]
@@ -128,7 +128,7 @@ def login():
 
 
 @app.route("/api/dashboard", methods=["GET", "POST"])
-@cross_origin(methods=["GET", "POST"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET", "POST"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def dashboard():
     username_of_logged_in_user = get_jwt_identity()
@@ -188,7 +188,7 @@ def dashboard():
 
 
 @app.route("/api/bank-details", methods=["GET", "PUT"])
-@cross_origin(methods=["GET", "PUT"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET", "PUT"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def updateBankAccount():
     username_of_logged_in_user = get_jwt_identity()
@@ -219,7 +219,7 @@ def updateBankAccount():
 
 
 @app.route("/api/personal-details", methods=["GET", "PUT"])
-@cross_origin(methods=["GET", "PUT"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET", "PUT"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def updatePersonalDetails():
     username_of_logged_in_user = get_jwt_identity()
@@ -244,7 +244,7 @@ def updatePersonalDetails():
 
 
 @app.route("/api/add-job", methods=["GET", "POST"])
-@cross_origin(methods=["GET", "POST"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET", "POST"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def addJob():
     username_of_logged_in_user = get_jwt_identity()
@@ -305,7 +305,7 @@ def addJob():
 
 
 @app.route("/api/records", methods=["GET"])
-@cross_origin(methods=["GET"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def records():
     username_of_logged_in_user = get_jwt_identity()
@@ -320,7 +320,7 @@ def records():
 
 
 @app.route("/api/records/update/<int:id>", methods=["GET", "PUT"])
-@cross_origin(methods=["GET", "PUT"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET", "PUT"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def update_record(id):
     username_of_logged_in_user = get_jwt_identity()
@@ -391,7 +391,7 @@ def update_record(id):
 
 
 @app.route("/api/records/delete/<int:id>", methods=["DELETE"])
-@cross_origin(methods=["DELETE"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["DELETE"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def delete_job(id):
     username_of_logged_in_user = get_jwt_identity()
@@ -409,7 +409,7 @@ def delete_job(id):
 
 
 @app.route("/api/records/<int:id>", methods=["GET"])
-@cross_origin(methods=["GET"], headers=["Content-Type", "Authorization"], origin="https://cs50-lancer.herokuapp.com/")
+@cross_origin(methods=["GET"], headers=["Content-Type", "Authorization"], origin="https://kailafitz.pythonanywhere.com/")
 @jwt_required()
 def invoice(id):
     username_of_logged_in_user = get_jwt_identity()

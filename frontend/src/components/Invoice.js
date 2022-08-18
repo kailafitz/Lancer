@@ -35,7 +35,7 @@ export const Invoice = () => {
 
     useEffect(() => {
         if (Object.keys(data).length <= 0) {
-            axios.get(`https://cs50-lancer.herokuapp.com/api/records/${id}`, {
+            axios.get(`https://kailafitz.pythonanywhere.com/api/records/${id}`, {
                 headers: {
                     Authorization: "Bearer " + token,
                     "Access-Control-Allow-Origin": "*"

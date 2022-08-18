@@ -14,7 +14,7 @@ jwt = JWTManager(app)
 login_manager = LoginManager()
 login_manager.login_view = "login"
 login_manager.init_app(app)
-CORS(app, origins="https://cs50-lancer.herokuapp.com",
+CORS(app, origins="https://kailafitz.pythonanywhere.com",
      allow_headers=["Content-Type", "Authorization",
                     "Access-Control-Allow-Credentials"],
      supports_credentials=True)

@@ -75,7 +75,7 @@ export const UpdateRecord = ({ id }) => {
 
     useEffect(() => {
         if (Object.keys(data).length <= 0) {
-            axios.get(`https://cs50-lancer.herokuapp.com/api/records/update/${id}`, {
+            axios.get(`https://kailafitz.pythonanywhere.com/api/records/update/${id}`, {
                 headers: {
                     Authorization: "Bearer " + token,
                     "Access-Control-Allow-Origin": "*"
@@ -139,7 +139,7 @@ export const UpdateRecord = ({ id }) => {
             }
         }
 
-        axios.put(`https://cs50-lancer.herokuapp.com/api/records/update/${id}`, { "job_description": job_description, "gross_pay": gross_pay, "date_created": date, "employer_name": employer_name, "employer_line_1": employer_line_1, "employer_line_2": employer_line_2, "employer_town": employer_town, "employer_region": employer_region, "employer_country": employer_country }, {
+        axios.put(`https://kailafitz.pythonanywhere.com/api/records/update/${id}`, { "job_description": job_description, "gross_pay": gross_pay, "date_created": date, "employer_name": employer_name, "employer_line_1": employer_line_1, "employer_line_2": employer_line_2, "employer_town": employer_town, "employer_region": employer_region, "employer_country": employer_country }, {
             headers: {
                 Authorization: "Bearer " + token,
                 "Access-Control-Allow-Origin": "*"
@@ -150,7 +150,7 @@ export const UpdateRecord = ({ id }) => {
             if (errors) {
                 clearErrors();
             }
-            window.location.href = "https://cs50-lancer.herokuapp.com/records";
+            window.location.href = "https://kailafitz.pythonanywhere.com/records";
         }).catch((e) => {
             let string = "";
             string = e.response.data.message;

@@ -27,7 +27,7 @@ export const UpdatePersonalDetails = () => {
 
     useEffect(() => {
         if (Object.keys(data).length <= 0) {
-            axios.get("https://cs50-lancer.herokuapp.com/api/personal-details", {
+            axios.get("https://kailafitz.pythonanywhere.com/api/personal-details", {
                 headers: {
                     Authorization: "Bearer " + token,
                     "Access-Control-Allow-Origin": "*"
@@ -47,7 +47,7 @@ export const UpdatePersonalDetails = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         const vat_number = e.target[0].value;
-        axios.put("https://cs50-lancer.herokuapp.com/api/personal-details", { "vat_number": vat_number }, {
+        axios.put("https://kailafitz.pythonanywhere.com/api/personal-details", { "vat_number": vat_number }, {
             headers: {
                 Authorization: "Bearer " + token,
                 "Access-Control-Allow-Origin": "*"

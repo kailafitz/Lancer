@@ -28,7 +28,7 @@ export const UpdateBankAccountDetails = () => {
 
     useEffect(() => {
         if (Object.keys(data).length <= 0) {
-            axios.get("https://cs50-lancer.herokuapp.com/api/bank-details", {
+            axios.get("https://kailafitz.pythonanywhere.com/api/bank-details", {
                 headers: {
                     Authorization: "Bearer " + token,
                     "Access-Control-Allow-Origin": "*"
@@ -49,7 +49,7 @@ export const UpdateBankAccountDetails = () => {
         e.preventDefault();
         const bic = e.target[0].value;
         const iban = e.target[1].value;
-        axios.put("https://cs50-lancer.herokuapp.com/bank-details", { "bic": bic, "iban": iban }, {
+        axios.put("https://kailafitz.pythonanywhere.com/bank-details", { "bic": bic, "iban": iban }, {
             headers: {
                 Authorization: "Bearer " + token,
                 "Access-Control-Allow-Origin": "*"

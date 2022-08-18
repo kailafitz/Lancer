@@ -72,9 +72,9 @@ export const Register = () => {
     const town = e.target[14].value;
     const region = e.target[15].value;
     const country = e.target[16].value;
-    axios.post("https://cs50-lancer.herokuapp.com/api/register", { "username": username, "email": email, "password": password, "confirm_password": confirm_password, "first_name": first_name, "last_name": last_name, "bic": bic, "iban": iban, "vat_number": vat_number, "line_1": line_1, "line_2": line_2, "town": town, "region": region, "country": country }).then(response => {
+    axios.post("https://kailafitz.pythonanywhere.com/api/register", { "username": username, "email": email, "password": password, "confirm_password": confirm_password, "first_name": first_name, "last_name": last_name, "bic": bic, "iban": iban, "vat_number": vat_number, "line_1": line_1, "line_2": line_2, "town": town, "region": region, "country": country }).then(response => {
       setToken(response.data.access_token);
-      window.location.href = "https://cs50-lancer.herokuapp.com/records";
+      window.location.href = "https://kailafitz.pythonanywhere.com/records";
     }).catch((e) => {
       let string = "";
       string = e.response.data.message;

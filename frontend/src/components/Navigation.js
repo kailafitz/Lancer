@@ -21,13 +21,13 @@ export const Navigation = () => {
 
 
   const handleClick = () => {
-    axios.get("https://cs50-lancer.herokuapp.com/api/logout", {
+    axios.get("https://kailafitz.pythonanywhere.com/api/logout", {
       headers: {
         Authorization: "Bearer " + token
       }
     }).then((response) => {
       removeToken();
-      window.location.href = "https://cs50-lancer.herokuapp.com/";
+      window.location.href = "https://kailafitz.pythonanywhere.com/";
       return response;
     }).catch((err) => {
       return err;
@@ -36,7 +36,7 @@ export const Navigation = () => {
 
 
   useEffect(() => {
-    axios.get("https://cs50-lancer.herokuapp.com/api/active", {
+    axios.get("https://kailafitz.pythonanywhere.com/api/active", {
       headers: {
         Authorization: "Bearer " + token
       }

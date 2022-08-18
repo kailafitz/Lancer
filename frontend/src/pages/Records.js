@@ -42,7 +42,7 @@ export const Records = () => {
     const { token } = useToken();
 
     useEffect(() => {
-        axios.get("https://cs50-lancer.herokuapp.com/api/records", {
+        axios.get("https://kailafitz.pythonanywhere.com/api/records", {
             headers: {
                 Authorization: "Bearer " + token,
                 "Access-Control-Allow-Origin": "*"

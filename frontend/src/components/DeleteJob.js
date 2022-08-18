@@ -27,13 +27,13 @@ export const DeleteJob = ({ id }) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.delete(`https://cs50-lancer.herokuapp.com/records/delete/${id}`, {
+        axios.delete(`https://kailafitz.pythonanywhere.com/records/delete/${id}`, {
             headers: {
                 Authorization: "Bearer " + token,
                 "Access-Control-Allow-Origin": "*"
             }
         }).then(() => {
-            window.location.href = "https://cs50-lancer.herokuapp.com/records";
+            window.location.href = "https://kailafitz.pythonanywhere.com/records";
         }).catch((e) => {
             console.log(e);
         })

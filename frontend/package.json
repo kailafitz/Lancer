@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://cs50-lancer.herokuapp.com/",
+  "proxy": "https://kailafitz.pythonanywhere.com/",
   "dependencies": {
     "@hookform/resolvers": "^2.9.6",
     "@testing-library/jest-dom": "^5.16.4",
