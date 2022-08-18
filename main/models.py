@@ -1,9 +1,7 @@
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, ForeignKey, Integer, Float, String, DateTime
 from datetime import datetime
 from sqlalchemy.orm import relationship
-
-db = SQLAlchemy()
+from routes import db
 
 
 class User(db.Model):

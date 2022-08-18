@@ -1,6 +1,7 @@
 from main import app
-from main.models import db
+from main.routes import db
 import sys
+
 
 if __name__ == '__main__':
     try:
