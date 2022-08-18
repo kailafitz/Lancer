@@ -81,7 +81,6 @@ export const UpdateRecord = ({ id }) => {
                     "Access-Control-Allow-Origin": "*"
                 }
             }).then((response) => {
-                console.log(response);
                 setData(response.data);
             });
         }
@@ -157,9 +156,7 @@ export const UpdateRecord = ({ id }) => {
             setErrorMessage(string);
         });
     }
-
-    console.log(errors);
-
+    
     const handleCancel = () => {
         setErrorMessage("");
         setShow(false);
