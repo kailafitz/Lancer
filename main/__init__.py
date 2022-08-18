@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 app.secret_key = "SUPER_SECRET_KEY"
 app.config["JWT_SECRET_KEY"] = "secret-jwt-token"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/kailafitz/Lancer/db.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 jwt = JWTManager(app)
