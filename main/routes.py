@@ -1,4 +1,4 @@
-from main import app
+from main import app, db
 from crypt import methods
 from curses.ascii import US
 from datetime import datetime
@@ -8,7 +8,7 @@ from flask.helpers import send_from_directory
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, jwt_required, unset_jwt_cookies
 from sqlalchemy import extract
 from main.schema import JobSchema, UsersSchema, BankAccountSchema, UserAddressSchema, EmployerSchema
-from main.models import Job, User, BankAccount, UserAddress, Employer, db
+from main.models import Job, User, BankAccount, UserAddress, Employer
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import cross_origin
 from datetime import datetime, timedelta, timezone
