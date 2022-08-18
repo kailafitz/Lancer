@@ -1,5 +1,4 @@
-from main import app
-from main.models import db
+from main import app, db
 
 db.app = app
 db.init_app(app)

@@ -2,7 +2,7 @@ from main import app
 from crypt import methods
 from curses.ascii import US
 from datetime import datetime
-from main.models import db
+from main import db
 
 from flask import jsonify, request
 from flask.helpers import send_from_directory
